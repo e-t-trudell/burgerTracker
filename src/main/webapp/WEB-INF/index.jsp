@@ -29,6 +29,7 @@
    				<th>Burger Name</th>
    				<th>Restaurant</th>
    				<th>Rating</th>
+   				<th>Actions</th>
    			</tr>
    		</thead>
    		<tbody>
@@ -43,6 +44,7 @@
    			<td><c:out value="${burger.restaurantName}"></c:out></td>
    			<td><c:out value="${burger.rating}"></c:out></td>
    			<td><a href="/burger/${burger.id}"><button>Burger Page</button></a></td>
+   			<td><a href="/burger/${burger.id}/edit"><button>Edit Burger Page</button></a></td>
    		</tr>
    		</c:forEach>
    		</tbody>
@@ -78,5 +80,10 @@
    			<button>Submit</button>
    		</div>
    </form:form>
+   <!-- git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/e-t-trudell/burgerTracker.git
+git push -u origin main -->
+   
 </body>
 </html>

@@ -23,13 +23,6 @@ public class HomeController {
 	public String index(@ModelAttribute("burgers") BurgerModel burger) {
 		return"index.jsp";
 	}
-//	@GetMapping("/home")
-//	public String home(@ModelAttribute("burgers") BurgerModel burger) {
-//		
-//		
-//		model.addAttribute("allBurgers", allBurgers);
-//		return "index.jsp";
-//	}
 	@GetMapping("/home")
 	public String home(Model model) {
 		List<BurgerModel> allBurgers = burgerServ.getAllBurgers();
@@ -38,9 +31,5 @@ public class HomeController {
 		model.addAttribute("allBurgers", allBurgers);
 		return "index.jsp";
 	}
-	
-//	@GetMapping("/create")
-//	public String create(@ModelAttribute("burgers") BurgerModel burger) {
-//		return "index.jsp";
-//	}
 }
+	

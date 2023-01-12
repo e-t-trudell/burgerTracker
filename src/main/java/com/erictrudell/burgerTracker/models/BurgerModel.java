@@ -32,12 +32,12 @@ public class BurgerModel {
     private String restaurantName;
     
     @NotNull(message="Rating is required")
-    @Min(value=0, message="Rating must be 0-5")
+    
     @Max(value = 5, message="Rating must be 0-5")
     private int rating;
     
     
-    @Size(min=5, max=140, message="Notes must contain at least 5 letters")
+    @Size(min=4, max=140, message="Notes must contain at least 5 letters")
     private String notes;
     // This will not allow the createdAt column to be updated after creation
     @Column(updatable=false)
